@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Este es uno de los ejercicios</title>
+</head>
+
+<body>
+    <script>
+        /*Diseñar un programa en JavaScript que pida los
+datos requeridos en la fórmula y realice el cálculo
+del Punto de equilibrio.
+El Punto de equilibrio es la cantidad de
+ventas que debe tener un negocio de
+determinado producto para no perder dinero.
+Este indicador tiene la siguiente fórmula:
+Costos */
+( Precio de Venta - Costos Variables )
+CV= (COSTOS FIJOS)
+PV= (PRECIO DE VENTA)-(COSTOS VARIABLES)
+PE= (CV)/(PV)
+
+        var costosFijos = prompt("Ingrese los costos fijos");
+        var precioVenta = prompt("Ingrese el precio de venta");
+        var costosVariables = prompt("Ingrese los costos variables");
+        var cv = costosFijos;
+        var pv = precioVenta - costosVariables;
+        var pe = cv / pv;
+        alert("El punto de equilibrio es: " + pe);
+
+    </script>
+
+
+
+</body>
+</html>

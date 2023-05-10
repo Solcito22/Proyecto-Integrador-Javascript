@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Refactoriza el codigo para que si la edad ingresada es mayor que 16 años, le indique al usuario que puede votar. Caso contrario no hace nada.*/
+
+        const EDAD_MINIMA = 16
+
+        //1
+        let edadIngresada = prompt("Ingrese su edad")
+        //2
+        let edadConvertida = Number(edadIngresada)
+        //3
+        let esMayorDeEdad = edadConvertida >= EDAD_MINIMA
+        //4
+        if(edadConvertida >=18){
+        document.write("Usted tiene edad suficiente para votar")
+        }else{
+            document.write("Usted no tiene edad suficiente para votar")
+        }
+
+    </script>
+</body>
+</html>

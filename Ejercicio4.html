@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Realizar un programa que;
+        1) Solicite el ingreso su edad con un PROMPT al usuario.
+        2) Convertir ese valor a tipo numerico.
+        3) Plantear la operacion de relacion necesaria para determinar si en mayor que 18 años.
+        4) Mostar el mensaje "Sos mayor de edad? <respuesta (true o false)>"
+        */
+        const EDAD_MINIMA = 18
+        let edadIngresada = prompt("Ingrese su edad");
+        let edad = Number(edadIngresada);
+        let mayorDeEdad = edad >= EDAD_MINIMA;
+        console.log(`Sos mayor de edad? ${mayorDeEdad}`);
+
+
+
+    </script>
+</body>
+</html>
