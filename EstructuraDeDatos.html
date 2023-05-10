@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*** Estructuras de datos ***/
+			var // Controla el flujo del bucle
+				continuar = true,
+				// Para almacenar los datos ingresados
+				tipoActual = "",
+				descripcionActual = "",
+				energiaActual = 0,
+				presupuestoActual = 0,
+				tiempoActual = 0;
+			// Para controlar el agrupamiento
+			(tipoPrevio = ""),
+				// Acumuladores
+				(energiaTotal = 0),
+				(presupuestoTotal = 0),
+				(tiempoTotal = 0);
+			// Estadistica
+			efectividadTipo = 0;
+
+			/*** Algoritmo ***/
+			do {
+				tipoActual = prompt("Tipo de energía");
+				descripcionActual = prompt("Descripción");
+				energiaActual = Number(prompt("Energía generada (kw / h)"));
+				presupuestoActual = Number(prompt("Presupuesto"));
+				tiempoActual = Number(prompt("Tiempo estimado (en meses)"));
+
+				if (tipoPrevio == "") {
+					// Primera vuelta
+					tipoPrevio = tipoActual;
+					(energiaTotal = energiaActual),
+						(presupuestoTotal = presupuestoActual),
+						(tiempoTotal = tiempoActual);
+				} else {
+					if (tipoActual == tipoPrevio) {
+						// Dentro del mismo grupo
+						(energiaTotal += energiaActual),
+							(presupuestoTotal += presupuestoActual),
+							(tiempoTotal += tiempoActual);
+					} else {
+						// Cambio de grupo
+						efectividadTipo = energiaTotal / (presupuestoTotal * tiempoTotal);
+						alert("Tipo de energía: " + tipoPrevio);
+						alert("Efectividad: " + efectividadTipo);
+
+						tipoPrevio = tipoActual;
+						energiaTotal = energiaActual;
+						presupuestoTotal = presupuestoActual;
+						tiempoTotal = tiempoActual;
+					}
+				}
+			} while ((continuar = confirm("¿Hay más implementaciones?")));
+      
+			efectividadTipo = energiaTotal / (presupuestoTotal * tiempoTotal);
+			alert("Tipo de energía: " + tipoPrevio);
+			alert("Efectividad: " + efectividadTipo);
+
+    </script>
+</body>
+</html>
