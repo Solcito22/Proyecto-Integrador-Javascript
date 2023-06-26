@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* Reto buzzcola. Realizar un FOR que recorra los numeros del 1 al 100, pero cada vez que ;
+        - Encuentre un numero multiplo de 3, debe imprimir la palabra "buzz".
+        - Encuentre un numero multiplo de 5, debe imprimir la palabra "cola". 
+        - Encuentre un numero multiplo de 3 y 5 simultanemente, imprimir la palabra "buzzcola".
+        - Todos los otros casos, muestra el numero. 
+        
+        nota: Un numero es multiplo de otro si el resutlado de hacer el resto es igual a 0.
+        15 % 3 = 0 entonces 15 es multiplo de 3.
+
+        FOR y un varios IF anidados dentro.
+        */
+        
+        let numeros = [1,2,3,4]
+        let numerosMultiplos = [3,5,15]
+        let numerosMultiplos2 = [5,15]
+        let numerosMultiplos3 = [3,15]
+        let numerosMultiplos4 = [15]
+        
+        for(let i = 0; i < numeros.length; i++){
+            const valor = numeros[i]
+            if(valor %3===0){
+                console.log("buzz")
+            }else if(valor %5===0){
+                console.log("cola")
+            }else if(valor %3===0 && valor[i]%5===0){
+                console.log("buzzcola")
+            }else{
+                console.log(valor)
+            }
+        }
+
+
+        
+
+    </script>
+</body>
+</html>

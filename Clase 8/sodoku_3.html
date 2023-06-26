@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let sodokuDesboard = [
+            [0,0,0],
+            [0,0,0],
+            [0,0,0]
+        ]
+
+
+        function play(x, y){
+            
+            if(sodokuDesboard[x][y] < 3)
+                sodokuDesboard[x][y]++
+            else if(sodokuDesboard[x][y] === 3)
+                sodokuDesboard[x][y] = 0
+
+            /* Anidar el IF dentro de for para determinar si no hay repetidos en cada fila. */
+
+            for(let i = 0 ; i < 3 ; i++){
+                if(sodokuDesboard[i][0] !== sodokuDesboard[i][1] && sodokuDesboard[i][1] !== sodokuDesboard[i][2] && sodokuDesboard[i][0] !== 0 && sodokuDesboard[i][1] !== 0 && sodokuDesboard[i][2] !== 0){
+                    console.log("No hay repetidos")
+                }
+            }
+            
+            console.table(sodokuDesboard)
+        }
+    </script>
+</body>
+</html>

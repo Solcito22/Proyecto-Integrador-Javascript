@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* Dada la siguiente matriz de longitud de columnas fija en 3. Determinar para cada una de las filas, si todos los valores son iguales.. 
+        
+        let matris = [
+            [1,2,3],
+            [3,3,3],
+            [2,3,2]
+        ]
+        RESULTADO 
+        false
+        true
+        false
+
+        NOTA: Utilizar el ejericico 3 de referencia para armar el IF.
+        NOTA 2: Utilizar un FOR e IF anidado, no se necesita un segundo FOR.
+        */
+
+        let matris = [
+            [1,2,3],
+            [3,3,3],
+            [2,3,2]
+        ]
+
+        for(let i = 0; i<matris.length; i++){
+            if(matris[i][0] === matris[i][1] && matris[i][1] === matris[i][2]){
+                console.log("true")
+            }else{
+                console.log("false")
+            }
+        }
+        
+    </script>
+</body>
+</html>

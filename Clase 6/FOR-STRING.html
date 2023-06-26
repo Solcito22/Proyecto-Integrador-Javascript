@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //En programacion se comeinza a contar desde el O (Cero), no el 1 (uno).
+
+        //La h esta en primera posicion, y eso es 0
+        //La o esta en la segunda posicion, y su valor 1
+        //...
+        let string = "hola, ¿Como estas?"
+
+        console.log(string) //Todo el string
+        console.log(string[0])// Solo el primer caracter, la H
+        console.log(string[1])
+        console.log(string[2])
+        console.log(string[3])
+
+        //string.length = ULTIMA POSICION DEL STRING + 1
+        for(let i = 0 ; i < string.length; i++){
+            console.log(string[i])
+        }
+
+        //¿Puedo cambiar un caracter del string?
+        string[0] = "❌"
+        console.log(string)
+
+        /* Los string son un tipo de variable inmutable. */
+
+
+        //Ahora que tengo acceso a cada letra, puedo trabajar con ellas
+        let contadorDeA = 0
+        for(let i = 0 ; i < string.length; i++){
+            if(string[i] === "a"){
+                contadorDeA++
+            }
+        }
+        console.log(`Hay ${contadorDeA} a`)
+</script>
+</body>
+</html>

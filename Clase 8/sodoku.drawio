@@ -1,0 +1,139 @@
+<mxfile host="Electron" modified="2023-05-30T17:56:46.647Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.2.8 Chrome/112.0.5615.165 Electron/24.2.0 Safari/537.36" etag="C_WfvOe8VgqN6xYW4Wqv" version="21.2.8" type="device">
+  <diagram name="Página-1" id="bk8e3Q_53oUBqdUK2fcL">
+    <mxGraphModel dx="794" dy="511" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-1" value="&lt;h1&gt;Sodoku 3x3&lt;/h1&gt;&lt;p&gt;El juego esta compuesto por un cuadricula de nueve casillas, ordenadas en tres filas y tres columnas. Este tablero inicia totalemnte vacio y el jugador debe completarlo con los valores del 1, 2 y 3. El jugador gana, cuando el tablero esta completamente lleno y no hay repetidos en filas y columnas. No se pierde, ni se empata.&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="80" width="550" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-2" value="&lt;h1&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Tablero de juego&lt;/span&gt;&lt;/h1&gt;&lt;h1&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;Lo primero a definir es donde guardar la informacion del juego. Utilizar una matris de 3x3.&amp;nbsp;&lt;/span&gt;&lt;/h1&gt;&lt;div&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="230" width="560" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-3" value="&lt;h1&gt;Valores y transiciones&lt;/h1&gt;&lt;p&gt;Los valores validos son 1, 2, 3 y casilla vacia. Debemos definir un valor para representar la casilla vacia. ¿Cuales son las reglas de transicion entre estos estado?&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="340" width="560" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="pnZlPP31NHSUu3wY-uKt-4" target="pnZlPP31NHSUu3wY-uKt-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="pnZlPP31NHSUu3wY-uKt-4" target="pnZlPP31NHSUu3wY-uKt-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="pnZlPP31NHSUu3wY-uKt-4" target="pnZlPP31NHSUu3wY-uKt-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-4" value="1" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="335" y="460" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="pnZlPP31NHSUu3wY-uKt-5" target="pnZlPP31NHSUu3wY-uKt-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="pnZlPP31NHSUu3wY-uKt-5" target="pnZlPP31NHSUu3wY-uKt-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="pnZlPP31NHSUu3wY-uKt-5" target="pnZlPP31NHSUu3wY-uKt-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="474" y="640" />
+              <mxPoint x="369" y="640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-5" value="2" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="530" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="pnZlPP31NHSUu3wY-uKt-6" target="pnZlPP31NHSUu3wY-uKt-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="pnZlPP31NHSUu3wY-uKt-6" target="pnZlPP31NHSUu3wY-uKt-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="pnZlPP31NHSUu3wY-uKt-6" target="pnZlPP31NHSUu3wY-uKt-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-6" value="3" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="335" y="585" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="pnZlPP31NHSUu3wY-uKt-7" target="pnZlPP31NHSUu3wY-uKt-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="pnZlPP31NHSUu3wY-uKt-7" target="pnZlPP31NHSUu3wY-uKt-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="pnZlPP31NHSUu3wY-uKt-7" target="pnZlPP31NHSUu3wY-uKt-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="300" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-7" value="CV" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="530" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-22" value="Son muchas transiciones validas, voy a proponer una regla sencilla para acotar mi trabajo. Por ejemplo, tengo los numeros 1,2 y 3 en escalera, por lo que puedo plantear un ciclo ascendente como si estuviera contando con la unica condicion de que debe ser un ciclo cerrado (debe vovler a la casilla vacia).&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="660" width="520" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="pnZlPP31NHSUu3wY-uKt-41" target="pnZlPP31NHSUu3wY-uKt-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-41" value="1" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="710" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="pnZlPP31NHSUu3wY-uKt-45" target="pnZlPP31NHSUu3wY-uKt-49">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="445" y="855" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-45" value="2" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="425" y="780" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="pnZlPP31NHSUu3wY-uKt-49" target="pnZlPP31NHSUu3wY-uKt-53">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-49" value="3" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="835" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="pnZlPP31NHSUu3wY-uKt-53" target="pnZlPP31NHSUu3wY-uKt-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-53" value="CV" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="215" y="780" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-54" value="Utiliamos el 0 como valor de casilla vacia para copletar el ciclo." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="900" width="520" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="pnZlPP31NHSUu3wY-uKt-63" target="pnZlPP31NHSUu3wY-uKt-65">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-63" value="1" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="315" y="940" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="pnZlPP31NHSUu3wY-uKt-65" target="pnZlPP31NHSUu3wY-uKt-67">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="1085" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-65" value="2" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="1010" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="pnZlPP31NHSUu3wY-uKt-67" target="pnZlPP31NHSUu3wY-uKt-69">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-67" value="3" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="315" y="1065" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="pnZlPP31NHSUu3wY-uKt-69" target="pnZlPP31NHSUu3wY-uKt-63">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-69" value="0" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="1010" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pnZlPP31NHSUu3wY-uKt-70" value="La matris que representa el estado del juego es del tipo numerico, ya que los estados son todsos numero positvos enteros.&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="90" y="1120" width="520" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

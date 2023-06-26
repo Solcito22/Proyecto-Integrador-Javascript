@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* PARTE 2 
+            Refactorizar el codigo de la parte 2 para que imprma las columnas en orden inverso.
+            let matris = [
+                [1,2],
+                [3,4]
+            ]
+            
+            resultado
+            4
+            3
+            2
+            1
+
+            NOTA: Utilizar anidar un segundo for dentor del primero. 
+        */
+
+        let matris = [
+                [1,2],
+                [3,4]
+            ]
+
+            for(let i = matris.length -1; i>-1; i--){
+                for(let j = matris[i].length -1; j>-1; j--){
+                    console.log(matris[i][j])
+                }
+            }
+
+        
+
+    </script>
+</body>
+</html>

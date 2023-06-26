@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let array = [1,2,3,4,53,2,34,43,2,5,46,56,433,4,234,5,6,675,75,3,43,322,3,5,675]
+
+
+        /* 
+        ¿Quiero saber si el array contiene algun numero par?
+
+            1) Encontrar un nuemro par.
+            2) Demostrar que todos los numeros son impares.
+
+
+            Vamos a utilizar vanderas o flags (acumulador booleano).
+
+            Nosotros vamos a suponer una situacion inicial y vamos a intentar entontrar la opuesta.
+
+            
+        */
+        //No hay valores pares, a menos que demostremos lo contrario. 
+        let hayNumerosPares = false //NO - No hay numeros pares hasta que se demuestre lo contrario
+        for(let i = 0 ; i < array.length ; i++){
+            const numero = array[i]
+            if(numero % 2 === 0){
+                hayNumerosPares = true // SI, enocontre un numero par.
+            }
+        }
+        console.log(hayNumerosPares)
+    </script>
+</body>
+</html>

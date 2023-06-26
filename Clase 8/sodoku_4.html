@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let sodokuDesboard = [
+            [0,0,0],
+            [0,0,0],
+            [0,0,0]
+        ]
+
+
+        function play(x, y){
+            
+            if(sodokuDesboard[x][y] < 3)
+                sodokuDesboard[x][y]++
+            else if(sodokuDesboard[x][y] === 3)
+                sodokuDesboard[x][y] = 0
+
+            /* Implementen un bandera o acumulador booleano sobre este for para obtener una conclusion unica del recorrido. Nosotros lo que queremos saber es si hay algun repetido o no.*/
+
+            let noHayRepetidos = true
+            for(let i = 0 ; i < 3 ; i++){
+                if(sodokuDesboard[i][0] === sodokuDesboard[i][1] || sodokuDesboard[i][1] === sodokuDesboard[i][2] || 
+                sodokuDesboard[i][0] === sodokuDesboard[i][2] ||sodokuDesboard[i][0] === 0 || sodokuDesboard[i][1] === 0 || sodokuDesboard[i][2] === 0){
+                    noHayRepetidos = false
+                }
+            }
+
+            /* Tuve un error de implementacion de logica de codigo. El error estuvo en que estaba buscando que no haya repetidos. El inconveniente con esto es que al momento de controlar toda la matris es mas facil demostrar que hay repetidos en una fila para decir que no gano, y mucho mas dicil demostrar que no hay repetidos en todas las filas para decir que gano.
+            Por lo tanto, busco repetidos en el if dentro del for, en vez de busrcar que no haya repetidos. */
+            console.log(noHayRepetidos)
+            console.table(sodokuDesboard)
+        }
+    </script>
+</body>
+</html>

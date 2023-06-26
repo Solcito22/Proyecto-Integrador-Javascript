@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div style="display: grid; height: 90px; width: 90px; grid-template:  1fr 1fr 1fr / 1fr 1fr 1fr;">
+        <div style="border : orange solid 1px"  data-x="0" data-y="0" ></div>
+        <div style="border : orange solid 1px"  data-x="0" data-y="1" ></div>
+        <div style="border : orange solid 1px"  data-x="0" data-y="2" ></div>
+        <div style="border : orange solid 1px"  data-x="1" data-y="0" ></div>
+        <div style="border : orange solid 1px"  data-x="1" data-y="1" ></div>
+        <div style="border : orange solid 1px"  data-x="1" data-y="2" ></div>
+        <div style="border : orange solid 1px"  data-x="2" data-y="0" ></div>
+        <div style="border : orange solid 1px"  data-x="2" data-y="1" ></div>
+        <div style="border : orange solid 1px"  data-x="2" data-y="2" ></div>
+    </div>
+
+    <script>
+
+        let sodokuDesboard = [
+            [0,0,0],
+            [0,0,0],
+            [0,0,0]
+        ]
+
+
+        function play(x, y){
+            
+            if(sodokuDesboard[x][y] < 3)
+                sodokuDesboard[x][y]++
+            else if(sodokuDesboard[x][y] === 3)
+                sodokuDesboard[x][y] = 0
+
+          
+            let noHayRepetidosEnFilas = true
+            for(let i = 0 ; i < 3 ; i++){
+                if(sodokuDesboard[i][0] === sodokuDesboard[i][1] || sodokuDesboard[i][1] === sodokuDesboard[i][2] || 
+                sodokuDesboard[i][0] === sodokuDesboard[i][2] ||sodokuDesboard[i][0] === 0 || sodokuDesboard[i][1] === 0 || sodokuDesboard[i][2] === 0){
+                    noHayRepetidosEnFilas = false
+                }
+            }
+
+            /* Crear otro for con su propio if y bandera pero para las columnas. */
+
+            let noHayRepetidosEnColumnas = true
+            for(let j = 0 ; j < 3 ; j++){
+                if(sodokuDesboard[0][j] === sodokuDesboard[1][j] || sodokuDesboard[1][j] === sodokuDesboard[2][j] || 
+                sodokuDesboard[0][j] === sodokuDesboard[2][j] ||sodokuDesboard[0][j] === 0 || sodokuDesboard[1][j] === 0 || sodokuDesboard[2][j] === 0){
+                    noHayRepetidosEnColumnas = false
+                }
+            }
+
+
+            console.log(noHayRepetidosEnFilas)
+            console.table(sodokuDesboard)
+            return sodokuDesboard[x][y]
+        }
+
+        let elDivs = document.querySelectorAll("div div")
+
+        for(let i = 0 ; i < elDivs.length ; i++){
+            elDivs[i].addEventListener("click", function(event){
+                let el = event.target
+                let x = el.getAttribute("data-x")
+                let y = el.getAttribute("data-y")
+                let resultado = play(x, y)
+                el.innerHTML = resultado
+            })
+        }
+    </script>
+</body>
+</html>

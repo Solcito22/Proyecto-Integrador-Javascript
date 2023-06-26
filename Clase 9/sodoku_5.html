@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div style="display: grid; height: 90px; width: 90px; grid-template:  1fr 1fr 1fr / 1fr 1fr 1fr;">
+        <div style="border : orange solid 1px"  data-x="0" data-y="0" ></div>
+        <div style="border : orange solid 1px"  data-x="0" data-y="1" ></div>
+        <div style="border : orange solid 1px"  data-x="0" data-y="2" ></div>
+        <div style="border : orange solid 1px"  data-x="1" data-y="0" ></div>
+        <div style="border : orange solid 1px"  data-x="1" data-y="1" ></div>
+        <div style="border : orange solid 1px"  data-x="1" data-y="2" ></div>
+        <div style="border : orange solid 1px"  data-x="2" data-y="0" ></div>
+        <div style="border : orange solid 1px"  data-x="2" data-y="1" ></div>
+        <div style="border : orange solid 1px"  data-x="2" data-y="2" ></div>
+    </div>
+
+    <script>
+
+        let sodokuDesboard = [
+            [
+                {value : 0, esModficiable : true,},
+                {value : 0, esModficiable : true,},
+                {value : 0, esModficiable : true,}
+            ]
+            [
+                {value : 0, esModficiable : true},
+                {value : 1, esModficiable : false},
+                {value : 0, esModficiable : true}
+            ],
+            [
+                {value : 0, esModficiable : true},
+                {value : 0, esModficiable : true},
+                {value : 0, esModficiable : true}
+            ]
+        ]
+
+
+        function play(x, y){
+            if(sodokuDesboard[x][y].esModficiable === true){            
+                if(sodokuDesboard[x][y].value < 3)
+                    sodokuDesboard[x][y].value++
+                else if(sodokuDesboard[x][y].value === 3)
+                    sodokuDesboard[x][y].value = 0
+            }
+
+            
+            let noHayRepetidosEnFilas = true
+            for(let i = 0 ; i < 3 ; i++){
+                if(sodokuDesboard[i][0].value === sodokuDesboard[i][1].value || sodokuDesboard[i][1].value === sodokuDesboard[i][2].value || 
+                sodokuDesboard[i][0].value === sodokuDesboard[i][2].value ||sodokuDesboard[i][0].value === 0 || sodokuDesboard[i][1].value === 0 || sodokuDesboard[i][2].value === 0){
+                    noHayRepetidosEnFilas = false
+                }
+            }
+
+            /* Crear otro for con su propio if y bandera pero para las columnas. */
+
+            let noHayRepetidosEnColumnas = true
+            for(let j = 0 ; j < 3 ; j++){
+                if(sodokuDesboard[0][j].value === sodokuDesboard[1][j].value || sodokuDesboard[1][j].value === sodokuDesboard[2][j].value || 
+                sodokuDesboard[0][j].value === sodokuDesboard[2][j].value ||sodokuDesboard[0][j].value === 0 || sodokuDesboard[1][j].value === 0 || sodokuDesboard[2][j].value === 0){
+                    noHayRepetidosEnColumnas = false
+                }
+            }
+
+
+            console.log(noHayRepetidosEnFilas)
+            console.table(sodokuDesboard)
+            return sodokuDesboard[x][y].value
+        }
+
+        let elDivs = document.querySelectorAll("div div")
+
+        for(let i = 0 ; i < elDivs.length ; i++){
+            elDivs[i].addEventListener("click", function(event){
+                let el = event.target
+                let x = el.getAttribute("data-x")
+                let y = el.getAttribute("data-y")
+                let resultado = play(x, y)
+                el.innerHTML = resultado
+                //Modificar el codigo para que cuando el valor sea 1, la casilla se de color rojo. Cuando sea 2, sea de color verde, cuando sea 3 sea de color rosa. pink, green, red.
+                if(resultado === 1)
+                    el.style.backgroundColor = "green"
+                else if(resultado === 2)
+                    el.style.backgroundColor = "pink"
+                else if(resultado === 3)
+                el.style.backgroundColor = "red"
+                })
+        }
+
+    </script>
+</body>
+</html>

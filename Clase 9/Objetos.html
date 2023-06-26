@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // PARADIGMA ESTRUCTURADO : Una serie de operaciones secuenciales que ejecutadas en cierto orden nos dan un resultado.
+
+        //PARADIGMA ORIENTADO A OBJETOS o POO : Una serie de objetos interrelacionados en un contexto que se comunican para resolver problemas. 
+
+
+
+        let objeto = {
+            //clave en dicccionario / propiedad/atributo : valor
+            nombre : "Matias",
+            apellido : "rapa",
+            edad : 25,
+            titulo : "Casi ingeniero",
+            trabajo : "Desarrollador y docente"
+
+        }
+
+        console.log(objeto)
+
+        //Si quiero acceder a la infomacion asociada a una clave en particular, lo hago con la sintaxis : nombreDelObjeto.nombreDeLaClave
+        let nombre = objeto.nombre
+
+        //Tmb puedo aplicar descontruccion a objetos
+        let {apellido, edad} = {...objeto}
+        //Lo que no estoy solicitando en la parte de la izquierda, simplemente no se copia. Las claves no nombradas, no se obtiene.
+        
+        //¡ATENCION! Los nombres utilizados a la izquierda deben ser iguales a los que trae el objeto.
+
+        let {titulo, ...resto} = {...objeto}
+
+        //La operacion de destruccion puede ser utilizada para indicar en la parte izquierda la creacion de un sub objeto con el resto de claves no seleccionadas.
+
+        /* 
+        NOTA 
+        [] --> ARRAY
+        {} --> OBJETO
+        */
+        
+        
+    </script>
+</body>
+</html>

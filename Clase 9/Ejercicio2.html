@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <label> Email </label> <input type="email" name="" id="">
+    <script>
+
+        let jsonDePrueba = {
+                            postId: "1",
+                            id: "1",
+                            name: "id labore ex et quam laborum",
+                            email: "Eliseo@gardner.biz",
+                            body: "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium"
+                        }
+
+        //Solo mostrar el email dentro de un input para emails
+        /* 
+        1) Seleccionar el input con querySelect
+        2) Utilizando la propiedad value para el elemtno seleccionado, insertar el valor de email del json.
+        */
+
+        let elInputEmail = document.querySelector("input")
+        elInputEmail.value = jsonDePrueba.email
+        console.log(jsonDePrueba)
+    </script>
+</body>
+
+</html>
